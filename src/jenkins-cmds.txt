@@ -1,0 +1,14 @@
+javac Addition.java
+javac Hello.java
+javac Main.java
+javac -cp .;./junit-4.13.2.jar;./hamcrest-core-1.3.jar AdditionTest.java
+javac -cp .;./junit-4.13.2.jar;./hamcrest-core-1.3.jar HelloTest.java
+
+IF "%Parameter%" == "AdditionTest" (
+java -cp .;./junit-4.13.2.jar;./hamcrest-core-1.3.jar org.junit.runner.JUnitCore AdditionTest
+) ELSE (
+java -cp .;./junit-4.13.2.jar;./hamcrest-core-1.3.jar org.junit.runner.JUnitCore HelloTest
+)
+
+build job: 'JenkinsTesting', parameters: [string(name: 'Parameter', value: 'AdditionTest')]
+build job: 'JenkinsTesting', parameters: [string(name: 'Parameter', value: 'HelloTest')]
