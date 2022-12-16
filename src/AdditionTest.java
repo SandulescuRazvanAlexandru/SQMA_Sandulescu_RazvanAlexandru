@@ -1,11 +1,11 @@
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class AdditionTest {
+public class AdditionTest {
 
     @Test
-    void add() {
+    public void add() {
         var addition = new Addition();
         assertEquals(6, addition.add(1, 2, 3));
     }

@@ -1,10 +1,10 @@
-import org.junit.jupiter.api.Test;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
-class HelloTest {
+import static org.junit.Assert.*;
+
+public class HelloTest {
     @Test
-    void hello() {
+    public void hello() {
         Hello h = new Hello("ISM");
         assertEquals(h.hello(), "Hello ISM");
     }
